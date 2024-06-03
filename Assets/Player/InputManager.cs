@@ -2,11 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InputManager : MonoBehaviour
 {
     public static List<Action<Vector2, Vector2, Vector2>> mouseInputActions = new();
-    public static List<Action<Vector2>> moveInputActions = new();
+    public static List<Action<Vector2, bool>> moveInputActions = new();
     public static List<Action<float>> mouseLeftClickActions = new();
     public static List<Action<float>> jumpInputActions = new();
     float leftClickHeldTime = 0f;
@@ -24,10 +25,25 @@ public class InputManager : MonoBehaviour
     public KeyCode interactionKey;
     public static KeyCode _interactionKey;
     float interactionHeldTime = 0f;
+
+    //sprint key
+    public KeyCode sprintKey;
     public static string _interactionKeyText()
     {
         return $"<b><color=#ff0000ff>{_interactionKey}</color></b>";
     }
+    public static void ResetInputManager()
+    {
+        mouseInputActions.Clear();
+        moveInputActions.Clear();
+        mouseLeftClickActions.Clear();
+        jumpInputActions.Clear();
+        reloadInputActions.Clear();
+        mouseRightClickActions.Clear();
+        scrollWheelInputActions.Clear();
+        interactionInputActions.Clear();
+    }
+
     void Update()
     {
         _interactionKey = interactionKey;
@@ -35,14 +51,19 @@ public class InputManager : MonoBehaviour
         Vector2 mouseScreenPos = Input.mousePosition;
         Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
         Vector2 mouseDelta = new(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+        if(Cursor.visible)
+        {
+            mouseDelta = Vector2.zero;
+        }
         foreach (Action<Vector2,Vector2,Vector2> action in mouseInputActions)
         {
             action(mouseScreenPos, mouseWorldPos, mouseDelta);
         }
         Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        foreach (Action<Vector2> action in moveInputActions)
+        bool sprintInput = Input.GetKey(sprintKey);
+        foreach (var action in moveInputActions)
         {
-            action(moveInput);
+            action(moveInput, sprintInput);
         }
         foreach (Action<float> action in mouseLeftClickActions)
         {
@@ -140,7 +161,7 @@ public class InputManager : MonoBehaviour
     {
         mouseInputActions.Add(action);
     }
-    public static void RegisterMoveInputCallback(Action<Vector2> action)
+    public static void RegisterMoveInputCallback(Action<Vector2,bool> action)
     {
         moveInputActions.Add(action);
     }
