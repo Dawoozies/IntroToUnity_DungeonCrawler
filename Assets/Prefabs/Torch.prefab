@@ -116,7 +116,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.6
+      scalar: 0.4
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -287,7 +287,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -751,7 +751,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.44
+      value: 0.1
       mode: 0
       spread: 0
       speed:
@@ -2689,7 +2689,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2850,7 +2850,7 @@ ParticleSystem:
     damping: 1
     octaves: 3
     octaveMultiplier: 0.5
-    octaveScale: 1.28
+    octaveScale: 2.54
     quality: 2
     scrollSpeed:
       serializedVersion: 2
@@ -4804,8 +4804,8 @@ ParticleSystemRenderer:
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
-  m_VelocityScale: 0.1
-  m_LengthScale: 0.5
+  m_VelocityScale: 0.075
+  m_LengthScale: 0.1
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_ShadowBias: 0
@@ -4876,8 +4876,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1000
-  m_Range: 100
+  m_Intensity: 15
+  m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -4983,8 +4983,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.37530038
-      value: 0.491509
+      time: 0.37604773
+      value: 0.6239747
       inSlope: -11.447601
       outSlope: -11.447601
       tangentMode: 0
@@ -4992,8 +4992,8 @@ MonoBehaviour:
       inWeight: 0.038846966
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.38300353
-      value: 0.4129043
+      time: 0.3837509
+      value: 0.54537
       inSlope: -11.457561
       outSlope: -11.457561
       tangentMode: 0
@@ -5001,8 +5001,8 @@ MonoBehaviour:
       inWeight: 0.13448492
       outWeight: 0.069265686
     - serializedVersion: 3
-      time: 0.39150527
-      value: 0.48649874
+      time: 0.39225262
+      value: 0.61896443
       inSlope: 11.894048
       outSlope: 11.894048
       tangentMode: 0
