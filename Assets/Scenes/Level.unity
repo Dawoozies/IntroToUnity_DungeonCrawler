@@ -25283,6 +25283,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1604754777}
     m_Modifications:
+    - target: {fileID: 182765326505018119, guid: 7341288d146b80649ac5ae6b57f48f3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3041679495901376725, guid: 7341288d146b80649ac5ae6b57f48f3d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25333,10 +25338,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6655934751268213997, guid: 7341288d146b80649ac5ae6b57f48f3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951479896704153052, guid: 7341288d146b80649ac5ae6b57f48f3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305905588569976286, guid: 7341288d146b80649ac5ae6b57f48f3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8187604716123773921, guid: 7341288d146b80649ac5ae6b57f48f3d,
         type: 3}
       propertyPath: m_Name
       value: Chest_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187604716123773921, guid: 7341288d146b80649ac5ae6b57f48f3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773056941960959359, guid: 7341288d146b80649ac5ae6b57f48f3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206556010563599103, guid: 7341288d146b80649ac5ae6b57f48f3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
